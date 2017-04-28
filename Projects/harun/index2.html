@@ -97,13 +97,14 @@
 <script>
     //$('html').fullscreen();
     //screen.lockOrientation('landscape');
-$('#options-btn').click(function(){
-    var leftP = document.getElementById('leftPanelDiv');
-    var middleP = document.getElementById('middlePanelDiv');
-    var rightP = document.getElementById('rightPanelDiv');
-    $('#mainDiv').append($('#mainDiv > div').eq(1));
-    $('#mainDiv').append($('#mainDiv > div').eq(0));
-});
+	$('#options-btn').click(function(){
+		var leftP = document.getElementById('leftPanelDiv');
+		var middleP = document.getElementById('middlePanelDiv');
+		var rightP = document.getElementById('rightPanelDiv');
+		$('#mainDiv').append($('#mainDiv > div').eq(1));
+		$('#mainDiv').append($('#mainDiv > div').eq(0));
+	});
+
     $(document).ready(function(){
         swal({
                     title: "Turn On Fullscreen",
