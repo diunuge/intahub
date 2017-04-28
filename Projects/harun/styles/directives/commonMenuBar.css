@@ -1,0 +1,21 @@
+.commonMenuBar {
+
+}
+.commonMenuBar>.itemHolder {
+    display: inline-block;
+    min-width: 400px;
+}
+.commonMenuBar span {
+    display: inline-block;
+    margin: 0.4em 0.2em;
+    background-color: bisque;
+    padding:0.4em 0.6em;
+}
+
+.commonMenuBar>.menuBtn {
+
+}
+
+.commonMenuBar>.rightLeftBtn {
+
+}
