@@ -1,15 +1,7 @@
 (function (module) {
     cloudPOS.models = _.extend(module, {
         Langs: [
-            {"name": "English", "code": "en"},
-            {"name": "Français", "code": "fr"},
-            {"name": "Español", "code": "es"},
-            {"name": "Português", "code": "pt"},
-            {"name": "中文", "code": "zh_CN"},
-            {"name": "हिंदी", "code": "hi"},
-            {"name": "ქართული", "code": "ka"},
-            {"name": "ພາສາລາວ", "code": "lo"},
-            {"name": "tiếng Việt", "code": "vi"}
+            {"name": "English", "code": "en"}
         ]
     });
 }(cloudPOS.models || {}));

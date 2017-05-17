@@ -10,7 +10,7 @@
                 scope.$broadcast("UserAuthenticationFailureEvent", data, status);
             };
 
-            var apiVer = '/fineract-provider/api/v1';
+            var apiVer = '/api/v1';
 
             var getUserDetails = function(data){
 
@@ -41,14 +41,14 @@
             var getAccessToken = function(){
                 var refreshToken = localStorageService.getFromLocalStorage("tokendetails").refresh_token;
                 httpService.cancelAuthorization();
-                httpService.post( "/fineract-provider/api/oauth/token?&client_id=community-app&grant_type=refresh_token&client_secret=123&refresh_token=" + refreshToken)
+                httpService.post( "/api/oauth/token?&client_id=community-app&grant_type=refresh_token&client_secret=123&refresh_token=" + refreshToken)
                     .success(updateAccessDetails);
             }
 
             this.authenticateWithUsernamePassword = function (credentials) {
                 scope.$broadcast("UserAuthenticationStartEvent");
         		if(SECURITY === 'oauth'){
-	                httpService.post( "/fineract-provider/api/oauth/token?username=" + credentials.username + "&password=" + credentials.password +"&client_id=community-app&grant_type=password&client_secret=123")
+	                httpService.post( "/api/oauth/token?username=" + credentials.username + "&password=" + credentials.password +"&client_id=community-app&grant_type=password&client_secret=123")
 	                    .success(getUserDetails)
 	                    .error(onFailure);
         		} else {

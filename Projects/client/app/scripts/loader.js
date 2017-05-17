@@ -17,7 +17,6 @@
             'nvd3': '../bower_components/nvd3/nv.d3',
             'nvd3ChartDirectives': '../scripts/modules/angularjs-nvd3-directives',
             'styles': '../styles',
-            //'test': '../../test/functional',
             'notificationWidget': '../scripts/modules/notificationWidget',
             'configurations': '../scripts/modules/configurations',
             'angularFileUpload': '../bower_components/angularjs-file-upload/angular-file-upload',
@@ -109,11 +108,9 @@
 
     require(['CloudPOSComponents', 'CloudPOSStyles'], function (componentsInit) {
         componentsInit().then(function(){
-            //require(['test/testInitializer'], function (testMode) {
-            //    if (!testMode) {
-                    angular.bootstrap(document, ['CloudPOS_Application']);
-            //    }
-            //});
+
+            angular.bootstrap(document, ['CloudPOS_Application']);
+
         });
     });
 }());
